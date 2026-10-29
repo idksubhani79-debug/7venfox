@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Projects & Case Studies — 7venfox Digital Growth Agency</title>
+
+  <!-- Google Fonts: Futuristic Geometric Heading & Clean Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Dynamic Neural Network Canvas Background -->
+  <div class="ambient-beam"></div>
+  <div class="cursor-light-glow" id="cursorSpotlight"></div>
+  <canvas id="neuralBgCanvas"></canvas>
+
+  <div class="page-viewport">
+
+    <!-- ============================================================
+         HEADER & NAVIGATION PILL (7VENFOX)
+         ============================================================ -->
+    <header class="site-header">
+      <a href="7venfox_landing_page.html" class="brand-logo-wrap" title="7venfox Digital Growth Agency">
+        <div class="brand-logo">
+          <span class="logo-text">7VEN<span class="logo-code-bracket">&lt;/&gt;</span>FOX</span>
+        </div>
+      </a>
+
+      <nav class="header-nav-pill">
+        <a href="7venfox_landing_page.html#services" class="nav-link">Services</a>
+        <a href="7venfox_landing_page.html#process" class="nav-link">Process</a>
+        <a href="index.html" class="nav-link active">Work</a>
+        <a href="7venfox_landing_page.html#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-right">
+        <a href="7venfox_landing_page.html" class="btn-primary" style="padding: 10px 22px; font-size: 11px;">
+          <span>← Main Site</span>
+        </a>
+      </div>
+
+      <!-- Cybernetic Mobile Hamburger Toggle Button -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobileNavDrawer">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </header>
+
+    <!-- Cybernetic Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+      <div class="mobile-nav-content">
+        <div class="mobile-nav-brand">
+          <span class="logo-text" style="font-family: var(--font-display); font-size: 22px; font-weight: 900; letter-spacing: 2px;">7VEN<span class="logo-code-bracket">&lt;/&gt;</span>FOX</span>
+        </div>
+        <nav class="mobile-nav-links">
+          <a href="7venfox_landing_page.html#services" class="mobile-nav-link">Services</a>
+          <a href="7venfox_landing_page.html#process" class="mobile-nav-link">Process</a>
+          <a href="index.html" class="mobile-nav-link active">Work</a>
+          <a href="7venfox_landing_page.html#contact" class="mobile-nav-link">Contact</a>
+        </nav>
+        <div class="mobile-nav-cta">
+          <a href="7venfox_landing_page.html" class="btn-primary mobile-cta-btn">← Back to Main Site</a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ============================================================
+         MAIN CONTENT: PORTFOLIO & WORK
+         ============================================================ -->
+    <main class="portfolio-section">
+      <div class="container">
+
+        <!-- Section Header -->
+        <header class="portfolio-header">
+          <a href="7venfox_landing_page.html" class="back-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            <span>Back to Home</span>
+          </a>
+
+          <div>
+            <div class="portfolio-badge">
+              <span class="badge-dot"></span>
+              <span class="portfolio-badge__text">ENGINEERED CASE STUDIES</span>
+            </div>
+          </div>
+
+          <h1 class="portfolio-title">
+            OUR <span class="cyan-word">PROJECTS</span><span class="white-word">.</span>
+          </h1>
+          <p class="portfolio-desc">
+            Explore our curated work across high-performance web development, service platforms, fitness hubs, and immersive booking engines.
+          </p>
+        </header>
+
+
+        <!-- Interactive Category Filter Tabs -->
+        <div class="portfolio-filter-bar" id="filterBar">
+          <button class="filter-tab active" data-filter="all">All Work</button>
+          <button class="filter-tab" data-filter="web">Web Development</button>
+          <button class="filter-tab" data-filter="services">Home & Local Services</button>
+          <button class="filter-tab" data-filter="fitness">Fitness & Performance</button>
+          <button class="filter-tab" data-filter="ecommerce">Tours & Booking</button>
+        </div>
+
+
+        <!-- ============================================================
+             BENTO GRID OF CASE STUDIES
+             ============================================================ -->
+        <div class="portfolio-grid" id="portfolioGrid">
+
+          <!-- 1. SKYVORA (Travel and Tours Platform) -->
+          <article class="project-card project-card--featured" data-category="web ecommerce" data-title="Skyvora — Travel & Tours Platform" data-tag="// Travel & Booking Engine" data-image="1.png" data-tech="Next.js 14, TailwindCSS, TypeScript, Framer Motion" data-desc="Complete end-to-end travel and tour booking platform built for Skyvora. Features personalized international itineraries, curated popular travel packages, verified traveller reviews, and streamlined reservation pathways." data-metric="15,000+" data-metric-label="Happy Tourists" data-metric2="72+" data-metric2-label="Destinations" data-metric3="+310%" data-metric3-label="Booking Lift">
+            <div class="project-card__link">
+              <div class="project-card__top">
+                <span class="project-card__label">Skyvora Travel & Tours</span>
+                <span class="project-badge-pill">Featured Project</span>
+              </div>
+
+              <div class="project-card__preview">
+                <img src="1.png" alt="Skyvora Travel and Tours" class="project-card__img" loading="lazy">
+                <div class="project-card__overlay">
+                  <span class="preview-badge">View Case Study ↗</span>
+                </div>
+              </div>
+
+              <div class="project-card__footer">
+                <div class="project-card__brand">
+                  <svg class="project-card__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                  <h2 class="project-card__name">SKYVORA</h2>
+                </div>
+                <span class="project-card__category">// Travel & Tours</span>
+              </div>
+
+              <div class="project-tags-row">
+                <span class="tech-tag">Next.js 14</span>
+                <span class="tech-tag">TailwindCSS</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Framer</span>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- 2. SAFESHIELD (Pest Control Platform) -->
+          <article class="project-card" data-category="web services" data-title="SafeShield — Total Protection Pest Control" data-tag="// Pest Control Services" data-image="2.png" data-tech="React, Next.js, TailwindCSS, Node.js" data-desc="Modern high-converting web platform engineered for SafeShield Pest Control. Features customized treatment plan selection, residential and commercial protection modules, eco-friendly certification badges, and immediate quote dispatch." data-metric="+185%" data-metric-label="Inquiry Lift" data-metric2="10+ Yrs" data-metric2-label="Proven Trust" data-metric3="99.4%" data-metric3-label="Satisfaction">
+            <div class="project-card__link">
+              <div class="project-card__top">
+                <span class="project-card__label">SafeShield Pest Control</span>
+                <span class="project-badge-pill">Services</span>
+              </div>
+
+              <div class="project-card__preview">
+                <img src="2.png" alt="SafeShield Pest Control" class="project-card__img" loading="lazy">
+                <div class="project-card__overlay">
+                  <span class="preview-badge">View Case Study ↗</span>
+                </div>
+              </div>
+
+              <div class="project-card__footer">
+                <div class="project-card__brand">
+                  <svg class="project-card__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                  <h2 class="project-card__name">SAFESHIELD</h2>
+                </div>
+                <span class="project-card__category">// Pest Control</span>
+              </div>
+
+              <div class="project-tags-row">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Next.js</span>
+                <span class="tech-tag">TailwindCSS</span>
+                <span class="tech-tag">Node.js</span>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- 3. HYDRO HERO (Emergency Plumbing Platform) -->
+          <article class="project-card" data-category="web services" data-title="Hydro Hero — Emergency Plumbing Services" data-tag="// On-Demand Home Services" data-image="5.png" data-tech="Next.js 14, TailwindCSS, React, REST API" data-desc="Fast, trustworthy digital platform built for Hydro Hero Plumbing. Engineered for 24/7 emergency repair dispatch, transparent pricing tiers, certified technician verification, and automated appointment scheduling." data-metric="5,000+" data-metric-label="Happy Clients" data-metric2="20+ Yrs" data-metric2-label="Experience" data-metric3="24/7" data-metric3-label="On-Demand">
+            <div class="project-card__link">
+              <div class="project-card__top">
+                <span class="project-card__label">Hydro Hero Plumbing</span>
+                <span class="project-badge-pill">Home Services</span>
+              </div>
+
+              <div class="project-card__preview">
+                <img src="5.png" alt="Hydro Hero Plumbing" class="project-card__img" loading="lazy">
+                <div class="project-card__overlay">
+                  <span class="preview-badge">View Case Study ↗</span>
+                </div>
+              </div>
+
+              <div class="project-card__footer">
+                <div class="project-card__brand">
+                  <svg class="project-card__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                  <h2 class="project-card__name">HYDRO HERO</h2>
+                </div>
+                <span class="project-card__category">// Plumbing Services</span>
+              </div>
+
+              <div class="project-tags-row">
+                <span class="tech-tag">Next.js 14</span>
+                <span class="tech-tag">TailwindCSS</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">REST API</span>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- 4. NEXUS FITNESS (Personal Coaching & Performance) -->
+          <article class="project-card" data-category="web fitness" data-title="Nexus Fitness — Personalized Coaching & Training" data-tag="// Fitness & Athletics Platform" data-image="6.png" data-tech="Next.js 14, Framer Motion, TailwindCSS, Stripe" data-desc="High-impact fitness and coaching web platform built for Nexus Fitness. Designed to transform visitors into committed members with personalized training showcases, real client transformations, and free consultation booking." data-metric="+340%" data-metric-label="Signups Lift" data-metric2="0.3s" data-metric2-label="Velocity" data-metric3="98.5%" data-metric3-label="Retention">
+            <div class="project-card__link">
+              <div class="project-card__top">
+                <span class="project-card__label">Nexus Fitness Coaching</span>
+                <span class="project-badge-pill">Fitness</span>
+              </div>
+
+              <div class="project-card__preview">
+                <img src="6.png" alt="Nexus Fitness" class="project-card__img" loading="lazy">
+                <div class="project-card__overlay">
+                  <span class="preview-badge">View Case Study ↗</span>
+                </div>
+              </div>
+
+              <div class="project-card__footer">
+                <div class="project-card__brand">
+                  <svg class="project-card__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                  <h2 class="project-card__name">NEXUS FITNESS</h2>
+                </div>
+                <span class="project-card__category">// Fitness & Coaching</span>
+              </div>
+
+              <div class="project-tags-row">
+                <span class="tech-tag">Next.js 14</span>
+                <span class="tech-tag">Framer Motion</span>
+                <span class="tech-tag">TailwindCSS</span>
+                <span class="tech-tag">Stripe</span>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- 5. FORGELINE (Elite Strength & Conditioning Centre) -->
+          <article class="project-card" data-category="web fitness" data-title="Forgeline — Elite Strength & Conditioning Centre" data-tag="// High-Performance Athletics" data-image="8.png" data-tech="Next.js 14, WebGL 3D, TailwindCSS, Supabase" data-desc="Immersive dark-aesthetic strength and conditioning facility platform for Forgeline. Features the Three Pillars transformation framework, athlete testimonials, transparent coaching workflows, and complimentary session scheduling." data-metric="3.2x" data-metric-label="Trial Bookings" data-metric2="+290%" data-metric2-label="Engagement" data-metric3="99.8%" data-metric3-label="Satisfaction">
+            <div class="project-card__link">
+              <div class="project-card__top">
+                <span class="project-card__label">Forgeline Training Centre</span>
+                <span class="project-badge-pill">Athletics</span>
+              </div>
+
+              <div class="project-card__preview">
+                <img src="8.png" alt="Forgeline Training Centre" class="project-card__img" loading="lazy">
+                <div class="project-card__overlay">
+                  <span class="preview-badge">View Case Study ↗</span>
+                </div>
+              </div>
+
+              <div class="project-card__footer">
+                <div class="project-card__brand">
+                  <svg class="project-card__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                  <h2 class="project-card__name">FORGELINE</h2>
+                </div>
+                <span class="project-card__category">// Strength & Conditioning</span>
+              </div>
+
+              <div class="project-tags-row">
+                <span class="tech-tag">Next.js 14</span>
+                <span class="tech-tag">WebGL 3D</span>
+                <span class="tech-tag">TailwindCSS</span>
+                <span class="tech-tag">Supabase</span>
+              </div>
+            </div>
+          </article>
+
+
+        </div>
+
+
+
+        <!-- ============================================================
+             PROJECT INQUIRY CTA BANNER
+             ============================================================ -->
+        <section class="portfolio-cta-banner">
+          <div class="cta-left">
+            <h2>Ready to Engineer <span class="cyan-word">Your Vision?</span></h2>
+            <p>From cutting-edge custom websites to scalable software architectures, let's build a digital engine that outperforms the competition.</p>
+          </div>
+          <div>
+            <a href="7venfox_landing_page.html#contact" class="btn-primary" style="padding: 16px 36px; font-size: 12.5px;">
+              <span>Start Your Project</span>
+              <span style="font-size: 15px; color: var(--cyan-glow);">↗</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+
+    <!-- ============================================================
+         INTERACTIVE CASE STUDY MODAL OVERLAY
+         ============================================================ -->
+    <div class="modal-overlay" id="projectModal">
+      <div class="modal-card">
+        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">&times;</button>
+        
+        <div class="modal-preview-wrap">
+          <img id="modalImg" src="" alt="Project Showcase" class="modal-project-img">
+        </div>
+
+        <span class="portfolio-badge__text" id="modalCategory" style="font-size: 0.75rem; color: var(--cyan-glow); margin-bottom: 8px; display: block;">
+          // Web Development
+        </span>
+        <h2 id="modalTitle" style="font-size: 1.8rem; font-weight: 800; color: var(--text-pure); margin-bottom: 12px;">
+          Project Title
+        </h2>
+        <p id="modalDesc" style="color: var(--text-body); font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
+          Project description details.
+        </p>
+
+        <!-- Metric Highlights -->
+        <div class="modal-metric-grid">
+          <div class="metric-box">
+            <span class="metric-val" id="metric1Val">+310%</span>
+            <span class="metric-lbl" id="metric1Lbl">Engagement</span>
+          </div>
+          <div class="metric-box">
+            <span class="metric-val" id="metric2Val">0.3s</span>
+            <span class="metric-lbl" id="metric2Lbl">Velocity</span>
+          </div>
+          <div class="metric-box">
+            <span class="metric-val" id="metric3Val">+85%</span>
+            <span class="metric-lbl" id="metric3Lbl">Conversion</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 24px;">
+          <h4 style="font-size: 0.8rem; font-family: var(--font-display); color: var(--text-muted); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px;">
+            Engineered Tech Stack
+          </h4>
+          <div class="project-tags-row" id="modalTechRow"></div>
+        </div>
+
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href="7venfox_landing_page.html#contact" class="btn-primary" style="flex: 1; justify-content: center;">
+            <span>Request Similar Architecture</span>
+            <span style="color: var(--cyan-glow);">↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ============================================================
+         FOOTER (MATCHING 7VENFOX)
+         ============================================================ -->
+    <footer class="epic-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h3>7VEN<span class="cyan-word">&lt;/&gt;</span>FOX</h3>
+            <p>We engineer digital systems that expand discoverability, scale trust, and multiply your conversions.</p>
+            <a href="7venfox_landing_page.html#contact" class="btn-primary" style="padding: 10px 24px; font-size: 11px;">Let's Build</a>
+          </div>
+
+          <div>
+            <h4 class="footer-heading">Company</h4>
+            <ul class="footer-links">
+              <li><a href="7venfox_landing_page.html">Home</a></li>
+              <li><a href="7venfox_landing_page.html#services">Our Services</a></li>
+              <li><a href="index.html">Case Studies & Work</a></li>
+              <li><a href="7venfox_landing_page.html#process">Growth Process</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-heading">Services</h4>
+            <ul class="footer-links">
+              <li><a href="index.html?filter=web">Website Design</a></li>
+              <li><a href="index.html?filter=web">Web Development</a></li>
+              <li><a href="7venfox_landing_page.html#services">SEO Strategy</a></li>
+              <li><a href="7venfox_landing_page.html#services">Digital Branding</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-heading">Stay Connected</h4>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px;">Get digital growth tips straight to your inbox.</p>
+            <ul class="footer-links">
+              <li><a href="mailto:hello@7venfox.com">hello@7venfox.com</a></li>
+              <li><a href="tel:+1234567890">+1 (555) 123-4567</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>&copy; 2026 7venfox Digital Growth Agency. All rights reserved.</div>
+          <div style="display: flex; gap: 24px;">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
