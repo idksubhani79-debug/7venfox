@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us & Schedule Appointment — 7venfox Digital Growth Agency</title>
+
+  <!-- Google Fonts: Futuristic Geometric Heading & Clean Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Dynamic Neural Network Canvas Background -->
+  <div class="ambient-beam"></div>
+  <div class="cursor-light-glow" id="cursorSpotlight"></div>
+  <canvas id="neuralBgCanvas"></canvas>
+
+  <div class="page-viewport">
+
+    <!-- ============================================================
+         HEADER & NAVIGATION PILL (7VENFOX)
+         ============================================================ -->
+    <header class="site-header">
+      <a href="index.html" class="brand-logo-wrap" title="7venfox Digital Growth Agency">
+        <div class="brand-logo">
+          <span class="logo-text">7VEN<span class="logo-code-bracket">&lt;/&gt;</span>FOX</span>
+        </div>
+      </a>
+
+      <nav class="header-nav-pill">
+        <a href="index.html#services" class="nav-link">Services</a>
+        <a href="index.html#process" class="nav-link">Process</a>
+        <a href="index1.html" class="nav-link">Work</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+
+      <div class="header-right">
+        <a href="index1.html" class="btn-primary" style="padding: 10px 22px; font-size: 11px;">
+          <span>Explore Work ↗</span>
+        </a>
+      </div>
+
+      <!-- Cybernetic Mobile Hamburger Toggle Button -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation" aria-expanded="false"
+        aria-controls="mobileNavDrawer">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </header>
+
+    <!-- Cybernetic Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+      <div class="mobile-nav-content">
+        <div class="mobile-nav-brand">
+          <span class="logo-text"
+            style="font-family: var(--font-display); font-size: 22px; font-weight: 900; letter-spacing: 2px;">7VEN<span
+              class="logo-code-bracket">&lt;/&gt;</span>FOX</span>
+        </div>
+        <nav class="mobile-nav-links">
+          <a href="index.html#services" class="mobile-nav-link">Services</a>
+          <a href="index.html#process" class="mobile-nav-link">Process</a>
+          <a href="index1.html" class="mobile-nav-link">Work</a>
+          <a href="contact.html" class="mobile-nav-link active">Contact</a>
+        </nav>
+        <div class="mobile-nav-cta">
+          <a href="index1.html" class="btn-primary mobile-cta-btn">View Projects ↗</a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ============================================================
+         MAIN CONTENT: CONTACT & APPOINTMENT SCHEDULER
+         ============================================================ -->
+    <main class="contact-section">
+      <div class="container">
+
+        <!-- Section Header -->
+        <header class="contact-header">
+          <a href="index.html" class="back-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            <span>Back to Home</span>
+          </a>
+
+          <div>
+            <div class="contact-badge">
+              <span class="badge-dot"></span>
+              <span class="portfolio-badge__text">DIRECT TRANSMISSION &amp; APPOINTMENTS</span>
+            </div>
+          </div>
+
+          <h1 class="contact-title">
+            LET'S <span class="cyan-word">TALK</span><span class="white-word">.</span>
+          </h1>
+          <p class="contact-desc">
+            Ready to engineer high-velocity digital growth? Whether you're ready to start a project or want to schedule
+            a 1-on-1 strategy call, submit your brief below.
+          </p>
+        </header>
+
+        <!-- Two-Column Contact Layout -->
+        <div class="contact-layout">
+
+          <!-- Left Column: The Form Card -->
+          <div class="contact-form-card">
+
+            <div class="form-header-bar">
+              <h2 class="form-header-title">Initiate Project / Book Call</h2>
+              <div class="live-status-pill">
+                <span class="status-dot-pulse"></span>
+                <span>Response &lt; 24h</span>
+              </div>
+            </div>
+
+            <!-- Contact & Appointment Form -->
+            <form id="contactForm">
+              <!-- Name & Email -->
+              <div class="form-row">
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label class="form-label" for="userName">Your Name <span class="req">*</span></label>
+                  <input type="text" id="userName" name="name" class="form-input" placeholder="e.g. Alex Morgan"
+                    required>
+                </div>
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label class="form-label" for="userEmail">Email Address <span class="req">*</span></label>
+                  <input type="email" id="userEmail" name="email" class="form-input" placeholder="alex@company.com"
+                    required>
+                </div>
+              </div>
+
+              <!-- Phone & Company -->
+              <div class="form-row">
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label class="form-label" for="userPhone">Phone / WhatsApp</label>
+                  <input type="tel" id="userPhone" name="phone" class="form-input" placeholder="+1 (555) 000-0000">
+                </div>
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label class="form-label" for="userWebsite">Current Website or Company</label>
+                  <input type="text" id="userWebsite" name="website_or_company" class="form-input"
+                    placeholder="https://yoursite.com">
+                </div>
+              </div>
+
+              <!-- Service Type Selector -->
+              <div class="form-group">
+                <label class="form-label">What Can We Build For You? <span class="req">*</span></label>
+                <div class="service-pills-grid">
+                  <label class="service-pill-label">
+                    <input type="radio" name="service_type" value="Website Development" checked>
+                    <div class="service-pill-body">
+                      <span class="service-pill-dot"></span>
+                      <span>Web Development</span>
+                    </div>
+                  </label>
+
+                  <label class="service-pill-label">
+                    <input type="radio" name="service_type" value="SEO & Growth Architecture">
+                    <div class="service-pill-body">
+                      <span class="service-pill-dot"></span>
+                      <span>Growth &amp; SEO Engine</span>
+                    </div>
+                  </label>
+
+                  <label class="service-pill-label">
+                    <input type="radio" name="service_type" value="Digital Brand Revamp">
+                    <div class="service-pill-body">
+                      <span class="service-pill-dot"></span>
+                      <span>Digital Branding</span>
+                    </div>
+                  </label>
+
+                  <label class="service-pill-label">
+                    <input type="radio" name="service_type" value="1-on-1 Strategy Appointment">
+                    <div class="service-pill-body">
+                      <span class="service-pill-dot"></span>
+                      <span>Schedule 1-on-1 Call</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Budget & Preferred Appointment Slot -->
+              <div class="form-row">
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label class="form-label" for="projectBudget">Estimated Investment</label>
+                  <select id="projectBudget" name="estimated_budget" class="form-select">
+                    <option value="$1,000 – $2,500">$1,000 – $2,500 (Kickstart)</option>
+                    <option value="$2,500 – $5,000" selected>$2,500 – $5,000 (Growth Engine)</option>
+                    <option value="$5,000 – $10,000">$5,000 – $10,000 (Enterprise / Scaled)</option>
+                    <option value="$10,000+">$10,000+ (Full Custom System)</option>
+                    <option value="Undecided / Consultation Only">Undecided / Let's Discuss First</option>
+                  </select>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label class="form-label" for="appointmentTime">Preferred Meeting Time</label>
+                  <input type="text" id="appointmentTime" name="preferred_appointment_time" class="form-input"
+                    placeholder="e.g. Tomorrow 3:00 PM EST">
+                </div>
+              </div>
+
+              <!-- Message / Project Details -->
+              <div class="form-group">
+                <label class="form-label" for="projectBrief">Project Brief &amp; Goals <span
+                    class="req">*</span></label>
+                <textarea id="projectBrief" name="message" class="form-textarea" rows="4"
+                  placeholder="Tell us about your project, current bottlenecks, or specific goals for our conversation..."
+                  required></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" id="submitBtn" class="form-submit-btn">
+                <span class="submit-spinner" id="submitSpinner"></span>
+                <span id="submitBtnText">Transmit Inquiry &amp; Book Call ↗</span>
+              </button>
+
+              <div id="formStatusMsg" class="form-status-box"></div>
+            </form>
+
+            <!-- Success / Dispatch Overlay State -->
+            <div id="formSuccessOverlay" class="form-success-overlay">
+              <div class="form-success-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <h3 class="form-success-title" id="overlayTitle">Inquiry Ready for Dispatch!</h3>
+              <p class="form-success-desc" id="overlayDesc">
+                Your project brief has been compiled for <span
+                  class="form-success-email-highlight">subhanimohammad79@gmail.com</span>. Click below to deliver it via
+                your preferred channel:
+              </p>
+
+              <!-- Instant Dispatch Buttons -->
+              <div class="dispatch-action-grid">
+                <a href="#" id="sendGmailBtn" target="_blank" rel="noopener noreferrer"
+                  class="dispatch-action-btn btn-gmail">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                  </svg>
+                  <span>Open in Gmail (Web)</span>
+                </a>
+
+                <a href="#" id="sendMailtoBtn" class="dispatch-action-btn btn-default-mail">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  <span>Default Mail App</span>
+                </a>
+
+                <a href="#" id="sendWhatsAppBtn" target="_blank" rel="noopener noreferrer"
+                  class="dispatch-action-btn btn-whatsapp-dispatch">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z" />
+                  </svg>
+                  <span>Send on WhatsApp</span>
+                </a>
+
+                <button type="button" id="copyBriefBtn" class="dispatch-action-btn btn-copy-brief">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <span id="copyBtnText">Copy Full Brief</span>
+                </button>
+              </div>
+
+              <div style="margin-top: 24px;">
+                <button type="button" id="resetFormBtn" class="reset-form-btn">
+                  <span>← Edit Brief / Send Another</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Direct Connection Hub -->
+          <div class="contact-info-panel">
+
+            <!-- Card 1: Direct Transmission Channels -->
+            <div class="info-card">
+              <div class="info-card-header">
+                <div class="info-card-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <h3 class="info-card-title">Direct Connection</h3>
+              </div>
+
+              <div class="contact-channels-list">
+                <div class="contact-channel-item">
+                  <div style="flex: 1;">
+                    <div class="channel-detail-lbl">// Direct Business Email</div>
+                    <div class="channel-detail-val">
+                      <a href="mailto:subhanimohammad79@gmail.com">subhanimohammad79@gmail.com</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="contact-channel-item">
+                  <div style="flex: 1;">
+                    <div class="channel-detail-lbl">// Agency Inquiries</div>
+                    <div class="channel-detail-val">
+                      <a href="mailto:7venfoxltd@gmail.com">7venfoxltd@gmail.com</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="contact-channel-item">
+                  <div style="flex: 1;">
+                    <div class="channel-detail-lbl">// Phone &amp; Direct Line</div>
+                    <div class="channel-detail-val">
+                      <a href="tel:+17722371859">+1 772 237 1859</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="contact-channel-item">
+                  <div style="flex: 1;">
+                    <div class="channel-detail-lbl">// Global Dispatch</div>
+                    <div class="channel-detail-val">
+                      24/7 Digital Architecture Operations
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quick Connect Buttons -->
+              <div class="direct-actions-row">
+                <a href="https://wa.me/17722371859" target="_blank" rel="noopener noreferrer"
+                  class="direct-action-btn btn-whatsapp">
+                  <span>Chat on WhatsApp ↗</span>
+                </a>
+                <a href="tel:+17722371859" class="direct-action-btn btn-call">
+                  <span>Call Now ↗</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 2: What Happens Next Framework -->
+            <div class="info-card">
+              <div class="info-card-header">
+                <div class="info-card-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+                <h3 class="info-card-title">What Happens Next?</h3>
+              </div>
+
+              <div class="expectation-step">
+                <div class="step-num-badge">01</div>
+                <div class="step-content">
+                  <h4>Brief Analysis (&lt; 12 Hours)</h4>
+                  <p>We review your site, current visibility, tech stack, and goals to build initial architectural
+                    insights.</p>
+                </div>
+              </div>
+
+              <div class="expectation-step">
+                <div class="step-num-badge">02</div>
+                <div class="step-content">
+                  <h4>Discovery Call (30 Min)</h4>
+                  <p>A high-yield strategy session to align on system milestones, user flow, and measurable ROI targets.
+                  </p>
+                </div>
+              </div>
+
+              <div class="expectation-step">
+                <div class="step-num-badge">03</div>
+                <div class="step-content">
+                  <h4>Roadmap &amp; Sprint Kickoff</h4>
+                  <p>You receive an exact sprint schedule, transparent scope contract, and live staging deployment
+                    setup.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+
+
+    <!-- ============================================================
+         FOOTER (MATCHING 7VENFOX)
+         ============================================================ -->
+    <footer class="epic-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h3>7VEN<span class="cyan-word">&lt;/&gt;</span>FOX</h3>
+            <p>We engineer digital systems that expand discoverability, scale trust, and multiply your conversions.</p>
+            <a href="contact.html" class="btn-primary" style="padding: 10px 24px; font-size: 11px;">Let's Talk</a>
+          </div>
+
+          <div>
+            <h4 class="footer-heading">Company</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html#services">Our Services</a></li>
+              <li><a href="index1.html">Case Studies &amp; Work</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-heading">Services</h4>
+            <ul class="footer-links">
+              <li><a href="index1.html?filter=web">Website Design</a></li>
+              <li><a href="index1.html?filter=web">Web Development</a></li>
+              <li><a href="index.html#services">SEO Strategy</a></li>
+              <li><a href="index.html#services">Digital Branding</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-heading">Stay Connected</h4>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px;">Get digital growth tips
+              straight to your inbox.</p>
+            <ul class="footer-links">
+              <li><a href="mailto:subhanimohammad79@gmail.com">subhanimohammad79@gmail.com</a></li>
+              <li><a href="mailto:7venfoxltd@gmail.com">7venfoxltd@gmail.com</a></li>
+              <li><a href="tel:+17722371859">+1 772 237 1859</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>&copy; 2026 7venfox Digital Growth Agency. All rights reserved.</div>
+          <div style="display: flex; gap: 24px;">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+
+  <!-- Interactive Form Transmission Handler -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const contactForm = document.getElementById('contactForm');
+      const submitBtn = document.getElementById('submitBtn');
+      const submitSpinner = document.getElementById('submitSpinner');
+      const submitBtnText = document.getElementById('submitBtnText');
+      const formSuccessOverlay = document.getElementById('formSuccessOverlay');
+      const resetFormBtn = document.getElementById('resetFormBtn');
+      const formStatusMsg = document.getElementById('formStatusMsg');
+
+      // Dispatch Elements
+      const sendGmailBtn = document.getElementById('sendGmailBtn');
+      const sendMailtoBtn = document.getElementById('sendMailtoBtn');
+      const sendWhatsAppBtn = document.getElementById('sendWhatsAppBtn');
+      const copyBriefBtn = document.getElementById('copyBriefBtn');
+      const copyBtnText = document.getElementById('copyBtnText');
+      const overlayTitle = document.getElementById('overlayTitle');
+      const overlayDesc = document.getElementById('overlayDesc');
+
+      let currentBriefText = '';
+
+      if (!contactForm) return;
+
+      contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // Validate basic inputs
+        const name = document.getElementById('userName').value.trim();
+        const email = document.getElementById('userEmail').value.trim();
+        const phone = document.getElementById('userPhone').value.trim();
+        const website = document.getElementById('userWebsite').value.trim();
+        const service = document.querySelector('input[name="service_type"]:checked')?.value || 'Web Development';
+        const budget = document.getElementById('projectBudget').value;
+        const time = document.getElementById('appointmentTime').value.trim();
+        const message = document.getElementById('projectBrief').value.trim();
+
+        if (!name || !email || !message) {
+          showStatus("Please fill in all required fields (*).", "error");
+          return;
+        }
+
+        // Build Professional Brief
+        currentBriefText =
+          `===========================================
+7VENFOX DIGITAL GROWTH AGENCY — INQUIRY
+===========================================
+• Client Name: ${name}
+• Email Address: ${email}
+• Phone / WhatsApp: ${phone || 'Not provided'}
+• Website / Company: ${website || 'Not provided'}
+• Service Requested: ${service}
+• Estimated Budget: ${budget}
+• Preferred Meeting Time: ${time || 'Flexible / ASAP'}
+
+• Project Brief & Requirements:
+${message}
+===========================================`;
+
+        const subjectStr = `7venfox Project Inquiry & Appointment — ${name}`;
+        const recipientEmail = 'subhanimohammad79@gmail.com';
+
+        // Pre-build Links for 100% Reliable Delivery
+        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipientEmail}&su=${encodeURIComponent(subjectStr)}&body=${encodeURIComponent(currentBriefText)}`;
+        const mailtoUrl = `mailto:${recipientEmail}?subject=${encodeURIComponent(subjectStr)}&body=${encodeURIComponent(currentBriefText)}`;
+        const whatsappUrl = `https://wa.me/17722371859?text=${encodeURIComponent('Hi 7venfox, I would like to initiate a project / book an appointment:\n\n' + currentBriefText)}`;
+
+        sendGmailBtn.href = gmailUrl;
+        sendMailtoBtn.href = mailtoUrl;
+        sendWhatsAppBtn.href = whatsappUrl;
+
+        // UI Loading State
+        submitBtn.disabled = true;
+        if (submitSpinner) submitSpinner.style.display = 'inline-block';
+        if (submitBtnText) submitBtnText.textContent = 'Transmitting Data...';
+        hideStatus();
+
+        let backgroundSent = false;
+
+        // Try Background Submission with 2.5s timeout (prevent hanging)
+        try {
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), 2500);
+
+          const formData = new FormData(contactForm);
+          const data = Object.fromEntries(formData.entries());
+
+          const response = await fetch(`https://formsubmit.co/ajax/${recipientEmail}`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify(data),
+            signal: controller.signal
+          });
+
+          clearTimeout(timeoutId);
+          if (response.ok) {
+            backgroundSent = true;
+          }
+        } catch (err) {
+          // Timeout or server error — handled gracefully below
+          console.warn('Background forwarder unreachable. Activating instant direct dispatch.');
+        }
+
+        // Switch to Confirmation / Direct Dispatch View
+        contactForm.style.display = 'none';
+        formSuccessOverlay.style.display = 'block';
+
+        if (backgroundSent) {
+          overlayTitle.textContent = "Transmission Received!";
+          overlayDesc.innerHTML = `Your project brief has been securely routed directly to <span class="form-success-email-highlight">${recipientEmail}</span>. A senior strategist will review and reply within 24 hours.`;
+        } else {
+          overlayTitle.textContent = "Inquiry Ready for Transmission!";
+          overlayDesc.innerHTML = `Your brief has been compiled for <span class="form-success-email-highlight">${recipientEmail}</span>. Choose your preferred channel below to send it with one click:`;
+          // Automatically launch Gmail web compose or mailto for effortless UX
+          window.open(gmailUrl, '_blank');
+        }
+
+        submitBtn.disabled = false;
+        if (submitSpinner) submitSpinner.style.display = 'none';
+        if (submitBtnText) submitBtnText.textContent = 'Transmit Inquiry & Book Call ↗';
+      });
+
+      // Copy Brief to Clipboard
+      if (copyBriefBtn) {
+        copyBriefBtn.addEventListener('click', async () => {
+          try {
+            await navigator.clipboard.writeText(currentBriefText);
+            copyBtnText.textContent = 'Copied to Clipboard!';
+            setTimeout(() => {
+              copyBtnText.textContent = 'Copy Full Brief';
+            }, 2500);
+          } catch (err) {
+            copyBtnText.textContent = 'Select & Copy Below';
+          }
+        });
+      }
+
+      // Reset / Edit Form
+      if (resetFormBtn) {
+        resetFormBtn.addEventListener('click', () => {
+          formSuccessOverlay.style.display = 'none';
+          contactForm.style.display = 'block';
+          hideStatus();
+        });
+      }
+
+      function showStatus(msg, type) {
+        if (!formStatusMsg) return;
+        formStatusMsg.textContent = msg;
+        formStatusMsg.className = `form-status-box ${type}`;
+        formStatusMsg.style.display = 'flex';
+      }
+
+      function hideStatus() {
+        if (!formStatusMsg) return;
+        formStatusMsg.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+
+</html>
